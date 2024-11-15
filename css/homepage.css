@@ -1,0 +1,16 @@
+body, .container-fluid{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.hero-page{
+    background-image: url("/images/HeroPage.png");
+    background-size: cover;
+    background-position: center;
+    height: 800px;
+}
+
+.grey-background{
+    background-color: rgba(245, 245, 245, 1);
+}
