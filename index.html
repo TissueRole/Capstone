@@ -12,7 +12,7 @@
 </head>
 <body>
     <section class="container-fluid hero-page ">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+        <nav class="navbar navbar-expand-lg fixed-top nav-bg">
         <div class="container-fluid">
           <a class="navbar-brand ms-5 " href="#">Teen-Anim</a>
           <div class="collapse navbar-collapse" id="navbarNav">
@@ -24,7 +24,7 @@
                 <a class="nav-link" href="#about-page">About</a>
               </li>
               <li class="nav-item mx-3">
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link" href="#contact-page">Contact</a>
               </li>
               <li class="nav-item mx-3">
                 <a class="btn btn-primary" href="#" role="button">Log In</a>
@@ -107,10 +107,10 @@
         <p class="mb-5 fs-5">Teen-Anim provides youth with the knowledge and tools to make informed decisions, experiment with hands-on techniques, and see the <br>impact they can make through farming. We’re here to cultivate the next generation of leaders in agriculture, one step at a time.</p>
       </div>
     </section>
-    <section>
+    <section id="contact-page" class="contact-bg">
       <div class="container-fluid">
         <div class="row">
-          <div class="col border d-flex justify-content-center">
+          <div class="col d-flex justify-content-center">
             <div>
               <p class="text-center mt-3">Contact Us Now</p>
               <h2 class="text-center mb-4">Leave Us A Message</h2>
@@ -119,16 +119,25 @@
               <p class="fs-5">Phone Number: 0912345678</p>
             </div>
           </div>
-          <div class="col border">
+          <div class="col">
             <h2 class="mt-5 mb-4">Share Your Ideas</h2>
             <div>
               <label for="suggestion" class="form-label">Enter your suggestions:</label>
-              <textarea class="form-control" id="suggestion" rows="8" style="width: 500px;"></textarea>
+              <textarea class="form-control" id="suggestion" rows="10" style="width: 700px;"></textarea>
             </div>
-              <a class="btn btn-primary mt-5" href="#" role="button">Send Message</a>
+              <a class="btn btn-primary my-5" href="#" role="button">Send Message</a>
           </div>
         </div>
       </div>
     </section>
+    <footer>
+      <div class="contier-fluid footer-bg ">
+        <div class="py-3 mx-5 d-flex justify-content-around">
+          <p>Copyright 2024</p>
+          <p> LOGO </p>
+          <p>Terms & Conditions / Privacy Policy</p>
+        </div>
+      </div>
+    </footer>
 </body>
 </html>

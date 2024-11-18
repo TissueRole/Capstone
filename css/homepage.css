@@ -4,6 +4,10 @@ body, .container-fluid{
     overflow-x: hidden;
 }
 
+.nav-bg{
+    background-color: rgba(247, 195, 95, 1);
+}
+
 .hero-page{
     background-image: url("/images/HeroPage.png");
     background-size: cover;
@@ -13,4 +17,12 @@ body, .container-fluid{
 
 .grey-background{
     background-color: rgba(245, 245, 245, 1);
+}
+
+.footer-bg{
+    background-color: rgba(247, 195, 95, 1);
+}
+
+.contact-bg{
+    background-color: rgba(247, 195, 95, 0.75);
 }
