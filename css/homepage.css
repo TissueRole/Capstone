@@ -2,6 +2,9 @@ body, .container-fluid{
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Irish Grover';
+
 }
 
 .nav-bg{
@@ -9,10 +12,13 @@ body, .container-fluid{
 }
 
 .hero-page{
-    background-image: url("/images/HeroPage.png");
+    background-image: url("../images/HeroPage.png");
     background-size: cover;
     background-position: center;
     height: 800px;
+}
+h1{
+    color: #F7C35F;
 }
 
 .grey-background{
@@ -26,3 +32,24 @@ body, .container-fluid{
 .contact-bg{
     background-color: rgba(247, 194, 95, 0.603);
 }
+.teenanimlogo{
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    margin-left: 10px ;
+    margin-bottom: 0px;
+}
+
+.ml-5 {
+    margin-left: 250px;
+  }
+.buttonformat{
+    color: #F7C35F;
+    background-color: #2D5F4D;
+}
+.buttonformat:hover{
+    color: #F7C35F;
+    background-color: #239b56;
+}
+
+
