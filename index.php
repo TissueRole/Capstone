@@ -10,34 +10,37 @@
     </head>
 </head>
 <body>
-    <section class="container-fluid hero-page ">
-        <nav class="navbar navbar-expand-lg fixed-top nav-bg">
-          <div class="container-fluid">
-            <a class="navbar-brand mx-5" href="index.html">
-              <img src="images/clearteenalogo.png" class="teenanimlogo" alt="home logo" class="d-inline-block align-text-top ">
-              <strong class="fs-5 ms-3">TEEN-ANIM</strong>
-            </a>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav ms-auto me-5">
-                <li class="nav-item mx-3">
-                  <a class="nav-link fw-bold fs-5" href="php/modulepage.php">Modules</a>
-                </li>
-                <li class="nav-item mx-3">
-                  <a class="nav-link fw-bold fs-5" href="php/Forum/community.php">Community</a>
-                </li>
-                <li class="nav-item mx-3">
-                  <a class="nav-link fw-bold fs-5" href="php/simulator.php">Simulator</a>
-                </li>
-                <li class="nav-item mx-3">
-                  <a href="php/login.php" class="btn btn-success" >Sign In</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      <div class="hero-page-text">
-
-      </div>
+    <section class="container-fluid hero-page "> 
+      <nav class="navbar navbar-expand-lg sticky-top nav-bg mb-5"> 
+        <div class="container-fluid"> 
+          <a class="navbar-brand mx-5" href="index.html"> 
+            <img src="images/clearteenalogo.png" class="teenanimlogo" alt="home logo" class="d-inline-block align-text-top "> 
+            <strong class="fs-5 ms-3">TEEN-ANIM</strong> 
+          </a> 
+          <div class="collapse navbar-collapse" id="navbarNav"> 
+            <ul class="navbar-nav ms-auto me-5"> 
+              <li class="nav-item mx-3"> 
+                <a class="nav-link fw-bold fs-5" href="php/modulepage.php">Modules</a> 
+              </li> 
+              <li class="nav-item mx-3"> 
+                <a class="nav-link fw-bold fs-5" href="php/Forum/community.php">Community</a> 
+              </li> <li class="nav-item mx-3"> 
+                <a class="nav-link fw-bold fs-5" href="php/simulator.php">Simulator</a> 
+              </li> <li class="nav-item mx-3"> 
+                <a href="php/login.php" class="btn btn-success" >Sign In</a> 
+              </li> 
+            </ul> 
+          </div> 
+        </div> 
+      </nav> 
+      <div class="hero-page-text text-center text-white d-flex flex-column justify-content-center align-items-center"> 
+        <div>
+          <h1 class="display-1 mt-5 mb-5">Welcome to Teen-Anim</h1> 
+          <p class="lead my-4 fs-3">Empowering the next generation of farmers</p> 
+          <p class="mb-5 fs-3">Join us in exploring the exciting world of agriculture. Learn, grow, and connect with fellow young farmers. Together, we can cultivate a sustainable future.</p> 
+          <a href="php/signup.php" class="btn btn-success btn-lg">Get Started</a> 
+        </div>
+      </div> 
     </section>
     <section>
       <div class="container-fluid text-center">
@@ -90,7 +93,7 @@
               <h2 class="my-5">Join the Community!</h1>
               <p class="mb-5 fs-4">Log in to connect with fellow growers, access <br>exclusive resources, and unlock all the tools <br>you need to thrive in farming. Together, we’re <br>building a supportive space for learning, sharing, <br>and growing!</p>
               <div>
-                <a class="btn btn-success mt-5" href="#" role="button">Join Now</a>
+                <a class="btn btn-success mt-5" href="php/Forum/community.php" role="button">Join Now</a>
               </div>
             </div>
           </div>
