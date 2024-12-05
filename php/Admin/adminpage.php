@@ -195,7 +195,7 @@ include('../connection.php');
                             echo "<td>" . htmlspecialchars($row['username']) . "</td>";
                             echo "<td>" . htmlspecialchars($row['created_at']) . "</td>";
                             echo "<td>
-                                    <a href='deletequestion.php?id=" . $row['question_id'] . "' class='btn btn-sm btn-danger'>Delete</a>
+                                    <a href='deletequestions.php?id=" . $row['question_id'] . "' class='btn btn-sm btn-danger'>Delete</a>
                                 </td>";
                             echo "</tr>";
                         }

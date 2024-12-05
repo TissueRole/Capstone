@@ -2,8 +2,8 @@
 session_start();
 include "../connection.php";
 
-if (!isset($_SESSION['is_admin']) || $_SESSION['is_admin'] !== 1) {
-    header("Location: forum.php");
+if (!isset($_SESSION['username']) || $_SESSION['role'] !== 'admin') {
+    header("Location: ../login.php");
     exit;
 }
 
@@ -18,7 +18,7 @@ if (isset($_GET['id'])) {
     $delete_question->bind_param("i", $question_id);
     $delete_question->execute();
 
-    header("Location: adminpage.php");
+    header("Location: adminpage.php#forum-management");
     exit;
 } else {
     echo "No question ID provided.";

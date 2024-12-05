@@ -23,7 +23,7 @@
                   <a class="nav-link fw-bold fs-5" href="php/modulepage.php">Modules</a>
                 </li>
                 <li class="nav-item mx-3">
-                  <a class="nav-link fw-bold fs-5" href="php/community.php">Community</a>
+                  <a class="nav-link fw-bold fs-5" href="php/Forum/community.php">Community</a>
                 </li>
                 <li class="nav-item mx-3">
                   <a class="nav-link fw-bold fs-5" href="php/simulator.php">Simulator</a>
