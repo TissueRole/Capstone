@@ -23,10 +23,10 @@
                   <a class="nav-link fw-bold fs-5" href="php/modulepage.php">Modules</a>
                 </li>
                 <li class="nav-item mx-3">
-                  <a class="nav-link fw-bold fs-5" href="php/modulepage.php">Community</a>
+                  <a class="nav-link fw-bold fs-5" href="php/community.php">Community</a>
                 </li>
                 <li class="nav-item mx-3">
-                  <a class="nav-link fw-bold fs-5" href="#contact-page">Contact</a>
+                  <a class="nav-link fw-bold fs-5" href="php/simulator.php">Simulator</a>
                 </li>
                 <li class="nav-item mx-3">
                   <a href="php/login.php" class="btn btn-success" >Sign In</a>
@@ -35,7 +35,7 @@
             </div>
           </div>
         </nav>
-      <div class="her0-page-text">
+      <div class="hero-page-text">
 
       </div>
     </section>
