@@ -65,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_SESSION['user_id'])) {
     <nav class="navbar navbar-expand-lg navbar-dark bg-success">
         <div class="container-fluid">
         <a class="navbar-brand ms-5" href="community.php">Farming Community Forum</a>
-        <a class="navbar-brand me-5" href="../community.php">Back</a>
+        <a class="navbar-brand me-5" href="community.php">Back</a>
         </div>
     </nav>
     <main class="container my-4">
