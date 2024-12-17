@@ -76,6 +76,9 @@
                 <li class="nav-item">
                     <a class="nav-link fw-semibold text-white mx-5" aria-current="page" href="Forum/community.php">Farming Community</a>
                 </li>
+                <li class="nav-item mx-3"> 
+                    <a class="nav-link fw-bold fs-5" href="php/simulator.php">Simulator</a> 
+                </li> 
                 <li class="nav-item">
                     <a class="nav-link fw-semibold text-white me-5" aria-current="page" href="modulepage.php">Module</a>
                 </li>

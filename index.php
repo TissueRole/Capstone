@@ -24,9 +24,8 @@
               </li> 
               <li class="nav-item mx-3"> 
                 <a class="nav-link fw-bold fs-5" href="php/Forum/community.php">Community</a> 
-              </li> <li class="nav-item mx-3"> 
-                <a class="nav-link fw-bold fs-5" href="php/simulator.php">Simulator</a> 
-              </li> <li class="nav-item mx-3"> 
+              </li> 
+              <li class="nav-item mx-3"> 
                 <a href="php/login.php" class="btn btn-success" >Sign In</a> 
               </li> 
             </ul> 

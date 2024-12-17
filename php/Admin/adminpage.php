@@ -158,7 +158,7 @@ include('../connection.php');
                                     <a href='editmodule.php?id=" . $row['module_id'] . "' class='btn btn-sm btn-warning'>Edit</a>
                                   </td>";
                             echo "<td>
-                                    <a href='deletemodule.php?id=" . $row['module_id'] . "' class='btn btn-sm btn-danger'>Delete</a>
+                                    <a href='deletemodule.php?id=" . $row['module_id'] . "' class='btn btn-sm btn-danger'>Archive</a>
                                   </td>";
                             echo "</tr>";
                         }
