@@ -74,11 +74,11 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link fw-semibold text-white mx-5" aria-current="page" href="Forum/community.php">Farming Community</a>
+                    <a class="nav-link fw-semibold text-white " aria-current="page" href="Forum/community.php">Farming Community</a>
                 </li>
-                <li class="nav-item mx-3"> 
-                    <a class="nav-link fw-bold fs-5" href="php/simulator.php">Simulator</a> 
-                </li> 
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold text-white mx-5" aria-current="page" href="simulator.php">Simulation</a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link fw-semibold text-white me-5" aria-current="page" href="modulepage.php">Module</a>
                 </li>
