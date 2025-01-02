@@ -80,6 +80,9 @@
                     <a class="nav-link fw-semibold text-white mx-5" aria-current="page" href="simulator.php">Simulation</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link fw-semibold text-white me-5" aria-current="page" href="plantinder.php">Plantinder</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link fw-semibold text-white me-5" aria-current="page" href="modulepage.php">Module</a>
                 </li>
             </ul>

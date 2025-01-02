@@ -80,6 +80,7 @@ include('../connection.php');
                     <a class="nav-link" href="#" onclick="showSection('user-management')">User Management</a>
                     <a class="nav-link" href="#" onclick="showSection('module-management')">Module Management</a>
                     <a class="nav-link" href="#" onclick="showSection('forum-management')">Forum Management</a>
+                    <a class="nav-link" href="#" onclick="showSection('plantinder-management')">Plantinder Management</a>
                     <a class="nav-link" href="#" onclick="showSection('suggestions')">Suggestions</a>
                 </li>
             </ul>
@@ -236,6 +237,37 @@ include('../connection.php');
                         ?>
                     </tbody>
                 </table>
+            </section>
+            <section id="plantinder-management" class="content-section">
+                <h2 class="mb-2">Plant Management</h2>
+                <table class="table table-bordered table-striped">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Id</th>
+                            <th>Plant Name</th>
+                            <th>Description</th>
+                            <th>Image Path</th>
+                            <th>Edit</th>
+                        </tr>
+                    </thead>
+                    <tbody id="plantTable">
+                        <?php
+                        $result = $conn->query("SELECT * FROM plant");
+                        while ($row = $result->fetch_assoc()) {
+                            echo "<tr>";
+                            echo "<td>" . htmlspecialchars($row['plant_id']) . "</td>";
+                            echo "<td>" . htmlspecialchars($row['name']) . "</td>";
+                            echo "<td>" . htmlspecialchars($row['description']) . "</td>";
+                            echo "<td><img src='" . htmlspecialchars($row['image']) . "' alt='" . htmlspecialchars($row['name']) . "' width='100' height='100'></td>";
+                            echo "<td>
+                                    <a href='editplant.php?id=" . $row['plant_id'] . "' class='btn btn-sm btn-warning'>Edit</a>
+                                  </td>";
+                            echo "</tr>";
+                        }
+                        ?>
+                    </tbody>
+                </table>
+                <a href="addplant.php" class="btn btn-dark">Add New</a>
             </section>
             <section id="suggestions" class="content-section">
                 <h2>Suggestions</h2>
