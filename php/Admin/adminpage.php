@@ -247,6 +247,10 @@ include('../connection.php');
                             <th>Plant Name</th>
                             <th>Description</th>
                             <th>Image Path</th>
+                            <th>Container & Soil</th>
+                            <th>Watering</th>
+                            <th>Sunlight</th>
+                            <th>Tips</th>
                             <th>Edit</th>
                         </tr>
                     </thead>
@@ -258,7 +262,11 @@ include('../connection.php');
                             echo "<td>" . htmlspecialchars($row['plant_id']) . "</td>";
                             echo "<td>" . htmlspecialchars($row['name']) . "</td>";
                             echo "<td>" . htmlspecialchars($row['description']) . "</td>";
-                            echo "<td><img src='" . htmlspecialchars($row['image']) . "' alt='" . htmlspecialchars($row['name']) . "' width='100' height='100'></td>";
+                            echo "<td>" . htmlspecialchars($row['image']) . "</td>";
+                            echo "<td>" . htmlspecialchars($row['container_soil']) . "</td>";
+                            echo "<td>" . htmlspecialchars($row['watering']) . "</td>";
+                            echo "<td>" . htmlspecialchars($row['sunlight']) . "</td>";
+                            echo "<td>" . htmlspecialchars($row['tips']) . "</td>";
                             echo "<td>
                                     <a href='editplant.php?id=" . $row['plant_id'] . "' class='btn btn-sm btn-warning'>Edit</a>
                                   </td>";

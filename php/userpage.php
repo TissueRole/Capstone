@@ -88,12 +88,14 @@
             </ul>
         </div>
     </nav>
-    <div class="sidebar pt-5 d-flex flex-column ">
+    <div class="sidebar pt-5 d-flex flex-column">
         <div class="flex-grow-1">
             <a class="nav-link ps-4 mt-4 text-white <?php echo ($active_section == 'profile') ? 'active' : ''; ?>" href="?section=profile">Profile</a>
             <a class="nav-link ps-4 text-white <?php echo ($active_section == 'settings') ? 'active' : ''; ?>" href="?section=settings">Settings</a>
+            <a class="nav-link ps-4 text-white <?php echo ($active_section == 'favorites') ? 'active' : ''; ?>" href="?section=favorites">Favorites</a> <!-- Added Favorites Link -->
             <a class="nav-link ps-4 text-white" href="logout.php">Logout</a>
         </div>
+    </div>
     </div>
     <div class="main-content">
         <div class="container">
@@ -181,6 +183,45 @@
                             </div>
                             <button type="submit" class="btn btn-primary" name="change_password">Change Password</button>
                         </form>
+                    </div>
+                </div>
+            <?php elseif ($active_section == 'favorites'): ?>
+                <div class="card shadow-sm mb-4">
+                    <div class="card-header bg-success text-white">
+                        <h5>Your Favorite Plants</h5>
+                    </div>
+                    <div class="card-body">
+                        <?php
+                        $favorite_sql = "SELECT f.plant_id, p.name, p.image, p.container_soil, p.watering, p.sunlight, p.tips 
+                                        FROM favorites f
+                                        JOIN plant p ON f.plant_id = p.plant_id
+                                        WHERE f.user_id = {$_SESSION['user_id']}";
+
+                        $favorite_result = $conn->query($favorite_sql);
+                        if ($favorite_result->num_rows > 0):
+                        ?>
+                            <ul class="list-group">
+                                <?php while ($favorite = $favorite_result->fetch_assoc()): ?>
+                                    <li class="list-group-item">
+                                        <div class="d-flex justify-content-between">
+                                            <div class="d-flex">
+                                                <img src="<?php echo htmlspecialchars($favorite['image']); ?>" alt="<?php echo htmlspecialchars($favorite['name']); ?>" class="img-thumbnail" style="width: 150px; height: 150px; object-fit: cover;">
+                                                <div class="ms-3">
+                                                    <strong class="fs-4"><?php echo htmlspecialchars($favorite['name']); ?></strong>
+                                                    <p class="mb-1"><strong>Container & Soil:</strong> <?php echo htmlspecialchars($favorite['container_soil']); ?></p>
+                                                    <p class="mb-1"><strong>Watering:</strong> <?php echo htmlspecialchars($favorite['watering']); ?></p>
+                                                    <p class="mb-1"><strong>Sunlight:</strong> <?php echo htmlspecialchars($favorite['sunlight']); ?></p>
+                                                    <p class="mb-0"><strong>Tips:</strong> <?php echo htmlspecialchars($favorite['tips']); ?></p>
+                                                </div>
+                                            </div>
+                                            <a href="remove_favorite.php?plant_id=<?php echo $favorite['plant_id']; ?>" class="btn btn-danger btn-xs px-2 py-1">Remove</a>
+                                        </div>
+                                    </li>
+                                <?php endwhile; ?>
+                            </ul>
+                        <?php else: ?>
+                            <p>You have no favorite plants.</p>
+                        <?php endif; ?>
                     </div>
                 </div>
             <?php endif; ?>

@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plant Swipe</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        body{
+            background:radial-gradient(circle,rgba(40, 167, 69, .9),rgba(40, 167, 69, .5));
+        }
         .card {
             width: 500px;
             margin: auto;
@@ -47,13 +51,16 @@
         </div>
     </nav>
     <div class="container">
-        <h1 class="text-center my-4">Swipe Plants</h1>
+        <h1 class="text-center my-5 ">Swipe Plants</h1>
         <div id="swipe-container" class="swipe-container">
-
         </div>
         <div class="buttons">
-            <button id="dislike-btn" class="btn btn-danger">Dislike</button>
-            <button id="like-btn" class="btn btn-success">Like</button>
+            <button id="dislike-btn" class="btn btn-danger">
+                <i class="fas fa-times"></i>
+            </button>
+            <button id="like-btn" class="btn btn-success">
+                <i class="fas fa-heart"></i>
+            </button>
         </div>
     </div>
     <script>

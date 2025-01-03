@@ -10,9 +10,13 @@
         $name = mysqli_real_escape_string($conn, $_POST['name']);
         $description = mysqli_real_escape_string($conn, $_POST['description']);
         $image = mysqli_real_escape_string($conn, $_POST['image']);
+        $container_soil = mysqli_real_escape_string($conn, $_POST['container_soil']);
+        $watering = mysqli_real_escape_string($conn, $_POST['watering']);
+        $sunlight = mysqli_real_escape_string($conn, $_POST['sunlight']);
+        $tips = mysqli_real_escape_string($conn, $_POST['tips']);
 
         if (!empty($name) && !empty($description) && !empty($image)) {
-            $sql = "INSERT INTO plant (name, description, image) VALUES ('$name','$description','$image')";
+            $sql = "INSERT INTO plant (name, description, image, container_soil, watering, sunlight, tips) VALUES ('$name','$description','$image', '$container_soil', '$watering', '$sunlight', '$tips')";
 
             if ($conn->query($sql) === TRUE) {
                 $message = "<h3 class='text-success text-center'>New plant added successfully!</h3>";
@@ -69,17 +73,29 @@
     <div class="d-flex">
         <div class="container p-5">
             <?php if (!empty($message)) echo $message; ?>
-            <form action="addplant.php" method="POST" class=" p-5 bg-dark ">
+            <form action="addplant.php" method="POST" class=" p-3 bg-dark  border-light rounded-3 mt-5">
                 <h2 class="fs-3 mb-4 text-white">Enter Plant Details:</h2>
 
                 <label for="name" class="form-label fw-semibold fs-5 text-white">Plant Name:</label>
                 <input type="text" class="form-control mb-3" id="name" name="name">
 
                 <label for="description" class="form-label fw-semibold fs-5 text-white">Description:</label>
-                <textarea class="form-control mb-3" id="description" name="description" rows="5"></textarea>
+                <textarea class="form-control mb-3" id="description" name="description" rows="3"></textarea>
 
                 <label for="image" class="form-label fw-semibold fs-5 text-white">Image:</label>
                 <input type="text" class="form-control mb-3" id="image" name="image">
+
+                <label for="container_soil" class="form-label fw-semibold fs-5 text-white">Container & Soil:</label>
+                <input type="text" class="form-control mb-3" id="container_soil" name="container_soil">
+
+                <label for="watering" class="form-label fw-semibold fs-5 text-white">Watering:</label>
+                <input type="text" class="form-control mb-3" id="watering" name="watering">
+
+                <label for="sunlight" class="form-label fw-semibold fs-5 text-white">Sunlight:</label>
+                <input type="text" class="form-control mb-3" id="sunlight" name="sunlight">
+
+                <label for="tips" class="form-label fw-semibold fs-5 text-white">Tips:</label>
+                <input type="text" class="form-control mb-3" id="tips" name="tips">
 
                 <input type="submit" value="Add Plant" class="btn btn-light mt-3">
                 <a href="adminpage.php#plantinder-management" class="btn btn-light mt-3">Back</a>
@@ -87,8 +103,5 @@
         </div>
     </div>
 
-    <footer class="footer bg-dark">
-        <p>&copy; 2024 Teen-Anim. All rights reserved.</p>
-    </footer>
 </body>
 </html>
