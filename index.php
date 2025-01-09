@@ -14,39 +14,61 @@
 </head>
 <body>
     <section class="container-fluid hero-page "> 
-      <nav class="navbar navbar-expand-lg sticky-top nav-bg mb-5">
-        <div class="container-fluid">
-          <a class="navbar-brand mx-5" href="index.php">
-            <img src="images/clearteenalogo.png" class="teenanimlogo" alt="home logo" class="d-inline-block align-text-top">
-            <strong class="fs-5 ms-3">TEEN-ANIM</strong>
-          </a>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto me-5">
-              <li class="nav-item mx-3">
-                <a class="nav-link fw-bold fs-5" href="php/modulepage.php">Modules</a>
-              </li>
-              <li class="nav-item mx-3">
-                <a class="nav-link fw-bold fs-5" href="php/Forum/community.php">Community</a>
-              </li>
-              <li class="nav-item mx-3">
-                <?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true): ?>
-                  <a href="php/userpage.php" class="btn btn-success">Profile</a>
-                <?php else: ?>
-                  <a href="php/login.php" class="btn btn-success">Sign In</a>
-                <?php endif; ?>
-              </li>
-            </ul>
+      <?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true): ?>
+          <nav class="navbar navbar-expand-lg sticky-top px-5 bg-success text-white">
+              <div class="container-fluid">
+                  <a class="navbar-brand mx-5 text-white" href="index.php">
+                      <img src="images/clearteenalogo.png" class="teenanimlogo" alt="home logo">
+                      <strong class="fs-5 ms-3">TEEN-ANIM</strong>
+                  </a>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                      <ul class="navbar-nav ms-auto">
+                          <li class="nav-item">
+                              <a class="nav-link fw-semibold text-white" href="php/Forum/community.php">Farming Community</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link fw-semibold text-white mx-5" href="php/simulator.php">Simulation</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link fw-semibold text-white me-5" href="php/plantinder.php">Plantinder</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link fw-semibold text-white me-5" href="php/modulepage.php">Module</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link fw-semibold text-white me-5" href="php/userpage.php">Profile</a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </nav>
+        <?php else: ?>
+          <nav class="navbar navbar-expand-lg sticky-top px-5 bg-success text-white">
+              <div class="container-fluid">
+                  <a class="navbar-brand mx-5" href="index.php">
+                      <img src="images/clearteenalogo.png" class="teenanimlogo" alt="home logo">
+                      <strong class="fs-5 ms-3">TEEN-ANIM</strong>
+                  </a>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                      <ul class="navbar-nav ms-auto me-5">
+                          <li class="nav-item mx-3">
+                              <a href="php/login.php" class="btn btn-warning">Sign In</a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </nav>
+        <?php endif; ?>
+        <div class="hero-page-text text-center text-white d-flex flex-column justify-content-center align-items-center"> 
+          <div>
+              <h1 class="display-1 mt-5 mb-5">Welcome to Teen-Anim</h1> 
+              <p class="lead my-4 fs-3">Empowering the next generation of farmers</p> 
+              <p class="mb-5 fs-3">Join us in exploring the exciting world of agriculture. Learn, grow, and connect with fellow young farmers. Together, we can cultivate a sustainable future.</p> 
+              <?php if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true): ?>
+                  <a href="php/signup.php" class="btn btn-success btn-lg">Get Started</a> 
+              <?php endif; ?>
           </div>
-        </div>
-      </nav>
-      <div class="hero-page-text text-center text-white d-flex flex-column justify-content-center align-items-center"> 
-        <div>
-          <h1 class="display-1 mt-5 mb-5">Welcome to Teen-Anim</h1> 
-          <p class="lead my-4 fs-3">Empowering the next generation of farmers</p> 
-          <p class="mb-5 fs-3">Join us in exploring the exciting world of agriculture. Learn, grow, and connect with fellow young farmers. Together, we can cultivate a sustainable future.</p> 
-          <a href="php/signup.php" class="btn btn-success btn-lg">Get Started</a> 
-        </div>
-      </div> 
+      </div>
     </section>
     <section>
       <div class="container-fluid text-center">

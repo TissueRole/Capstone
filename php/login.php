@@ -66,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto me-5">
                     <li class="nav-item mx-3">
-                        <a href="../index.php" class="btn btn-success">Back</a>
+                        <a href="../index.php" class="btn btn-success">Home Page</a>
                     </li>
                 </ul>
             </div>

@@ -70,24 +70,32 @@
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg sticky-top  px-5 bg-success text-white">
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link fw-semibold text-white " aria-current="page" href="Forum/community.php">Farming Community</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link fw-semibold text-white mx-5" aria-current="page" href="simulator.php">Simulation</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link fw-semibold text-white me-5" aria-current="page" href="plantinder.php">Plantinder</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link fw-semibold text-white me-5" aria-current="page" href="modulepage.php">Module</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    <nav class="navbar navbar-expand-lg sticky-top px-5 bg-success text-white">
+            <div class="container-fluid">
+                <a class="navbar-brand mx-5 text-white" href="../index.php">
+                    <strong class="fs-5 ms-3">TEEN-ANIM</strong>
+                </a>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link fw-semibold text-white" href="Forum/community.php">Farming Community</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-semibold text-white mx-5" href="simulator.php">Simulation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-semibold text-white me-5" href="plantinder.php">Plantinder</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-semibold text-white me-5" href="modulepage.php">Module</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-semibold text-white me-5" href="userpage.php">Profile</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     <div class="sidebar pt-5 d-flex flex-column">
         <div class="flex-grow-1">
             <a class="nav-link ps-4 mt-4 text-white <?php echo ($active_section == 'profile') ? 'active' : ''; ?>" href="?section=profile">Profile</a>

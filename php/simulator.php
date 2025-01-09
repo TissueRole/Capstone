@@ -14,40 +14,38 @@
         main {
             flex: 1;
         }
-        .navbar{
-            background-color: rgba(247, 195, 95, 1);
-        }
         footer{
-            background-color: rgba(247, 195, 95, 1);
+            background-color: rgba(40, 167, 69, .9);
         }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand ms-5" href="#">Farming AR</a>
-        </div>
-        <section class="container-fluid hero-page ">
-        <nav class="navbar navbar-expand-lg fixed-top nav-bg">
-          <div class="container-fluid">
-            <a class="navbar-brand mx-5" href="../index.php">
+  <nav class="navbar navbar-expand-lg sticky-top px-5 bg-success text-white">
+      <div class="container-fluid">
+          <a class="navbar-brand mx-5 text-white" href="../index.php">
               <strong class="fs-5 ms-3">TEEN-ANIM</strong>
-            </a>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav ms-auto me-5">
-                <li class="nav-item mx-3">
-                  <a class="nav-link fw-bold fs-5" href="modulepage.php">Modules</a>
-                </li>
-                <li class="nav-item mx-3">
-                  <a class="nav-link fw-bold fs-5" href="Forum/community.php">Community</a>
-                </li>
+          </a>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                      <a class="nav-link fw-semibold text-white" href="Forum/community.php">Farming Community</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link fw-semibold text-white mx-5" href="simulator.php">Simulation</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link fw-semibold text-white me-5" href="plantinder.php">Plantinder</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link fw-semibold text-white me-5" href="modulepage.php">Module</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link fw-semibold text-white me-5" href="userpage.php">Profile</a>
+                  </li>
               </ul>
-            </div>
           </div>
-        </nav>
-    </section>
-    </nav>
-
+      </div>
+  </nav>
     <main class="container text-center mt-5">
         <h1 class="mb-3">Experience Augmented Reality in Farming</h1>
         <p class="lead">Scan the QR code below to access our AR feature and explore interactive farming experiences. 
