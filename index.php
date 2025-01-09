@@ -13,7 +13,7 @@
     <section class="container-fluid hero-page "> 
       <nav class="navbar navbar-expand-lg sticky-top nav-bg mb-5"> 
         <div class="container-fluid"> 
-          <a class="navbar-brand mx-5" href="index.html"> 
+          <a class="navbar-brand mx-5" href="index.php"> 
             <img src="images/clearteenalogo.png" class="teenanimlogo" alt="home logo" class="d-inline-block align-text-top "> 
             <strong class="fs-5 ms-3">TEEN-ANIM</strong> 
           </a> 

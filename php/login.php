@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 header("Location: Admin/agriculturistpage.php");
                 exit();
             }else {
-                header("Location: userpage.php");
+                header("Location: Forum/community.php");
                 exit();
             }
         } else {
