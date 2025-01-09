@@ -5,8 +5,6 @@ if (!isset($_SESSION['username']) || $_SESSION['role'] != 'admin') {
     exit();
 }
 include('../connection.php');
-
-
 ?>
 
 <!DOCTYPE html>
@@ -108,15 +106,20 @@ include('../connection.php');
                             echo "<tr>";
                             echo "<td>" . htmlspecialchars($row['name']) . "</td>";
                             echo "<td>" . htmlspecialchars($row['username']) . "</td>";
-                            echo "<td>" . htmlspecialchars($row['role']) . "</td>";
+                            echo "<td>
+                                        <select class='form-select' onchange='updateUser(this, " . $row['user_id'] . ", \"role\")'>
+                                            <option value='admin'" . ($row['role'] == 'admin' ? ' selected' : '') . ">Admin</option>
+                                            <option value='student'" . ($row['role'] == 'student' ? ' selected' : '') . ">Student</option>
+                                            <option value='agriculturist'" . ($row['role'] == 'agriculturist' ? ' selected' : '') . ">Agriculturist</option>
+                                        </select>
+                                    </td>";
                             echo "<td>" . htmlspecialchars($row['date_created']) . "</td>";
                             echo "<td>
-                                    <select class='form-select' onchange='updateStatus(this, " . $row['user_id'] . ")'>
-                                        <option value='active'" . ($row['status'] == 'active' ? ' selected' : '') . ">Active</option>
-                                        <option value='inactive'" . ($row['status'] == 'inactive' ? ' selected' : '') . ">Inactive</option>
-                                    </select>
-                                  </td>";
-                            echo "</tr>";
+                                <select class='form-select' onchange='updateUser(this, " . $row['user_id'] . ", \"status\")'>
+                                    <option value='active'" . ($row['status'] == 'active' ? ' selected' : '') . ">Active</option>
+                                    <option value='inactive'" . ($row['status'] == 'inactive' ? ' selected' : '') . ">Inactive</option>
+                                </select>
+                            </td>";
                         }
                         ?>
                     </tbody>
@@ -360,16 +363,16 @@ include('../connection.php');
                 }
             }
         });
-        function updateStatus(select, userId) {
-            var status = select.value;
+        function updateUser(select, userId, field) {
+            var value = select.value;
             var xhr = new XMLHttpRequest();
-            xhr.open("GET", "updatestatus.php?id=" + userId + "&status=" + status, true);
+            xhr.open("GET", "updateuser.php?id=" + userId + "&field=" + field + "&value=" + value, true);
             xhr.onreadystatechange = function () {
                 if (xhr.readyState == 4) {
                     if (xhr.status == 200) {
-                        alert("Status updated successfully.");
+                        alert(field.charAt(0).toUpperCase() + field.slice(1) + " updated successfully.");
                     } else {
-                        alert("Error updating status: " + xhr.responseText);
+                        alert("Error updating " + field + ": " + xhr.responseText);
                     }
                 }
             };

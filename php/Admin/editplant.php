@@ -90,34 +90,32 @@
     <div class="d-flex">
         <div class="container p-5">
             <?php if (!empty($message)) echo $message; ?>
-            <form action="editplant.php" method="POST" class=" p-5 bg-dark ">
-                <h2 class="fs-3 mb-4 text-white">Enter Plant Details</h2>
+            <form action="addplant.php" method="POST" enctype="multipart/form-data" class="p-3 bg-success rounded-3 mt-5">
+                <h2 class="fs-3 mb-4 text-white">Enter Plant Details:</h2>
 
-                <input type="hidden" name="id" value="<?php echo $id; ?>">
-
-                <label for="name" class="form-label fw-semibold fs-5 text-white">Name:</label>
-                <input type="text" class="form-control mb-3" id="name" name="name" value="<?php echo $name;?>">
+                <label for="name" class="form-label fw-semibold fs-5 text-white">Plant Name:</label>
+                <input type="text" class="form-control mb-3" id="name" name="name" required>
 
                 <label for="description" class="form-label fw-semibold fs-5 text-white">Description:</label>
-                <textarea class="form-control mb-3" id="description" name="description" rows="5"><?php echo $description;?></textarea>
+                <textarea class="form-control mb-3" id="description" name="description" rows="3" required></textarea>
 
                 <label for="image" class="form-label fw-semibold fs-5 text-white">Image:</label>
-                <input class="form-control mb-3" id="image" name="image" value="<?php echo $image;?>">
+                <input type="file" class="form-control mb-3" id="image" name="image" accept="image/*" required>
 
                 <label for="container_soil" class="form-label fw-semibold fs-5 text-white">Container & Soil:</label>
-                <input class="form-control mb-3" id="container_soil" name="container_soil" value="<?php echo $container_soil;?>">
+                <input type="text" class="form-control mb-3" id="container_soil" name="container_soil" required>
 
                 <label for="watering" class="form-label fw-semibold fs-5 text-white">Watering:</label>
-                <input type="text" class="form-control mb-3" id="watering" name="watering" value="<?php echo $watering;?>">
+                <input type="text" class="form-control mb-3" id="watering" name="watering" required>
 
                 <label for="sunlight" class="form-label fw-semibold fs-5 text-white">Sunlight:</label>
-                <input type="text" class="form-control mb-3" id="sunlight" name="sunlight" value="<?php echo $sunlight;?>">
+                <input type="text" class="form-control mb-3" id="sunlight" name="sunlight" required>
 
                 <label for="tips" class="form-label fw-semibold fs-5 text-white">Tips:</label>
-                <input type="text" class="form-control mb-3" id="tips" name="tips" value="<?php echo $tips;?>">
+                <input type="text" class="form-control mb-3" id="tips" name="tips" required>
 
-                <input type="submit" value="Edit" class="btn btn-light mt-3">
-                <a href="adminpage.php" class="btn btn-light mt-3">Back</a>
+                <input type="submit" value="Add Plant" class="btn btn-light mt-3">
+                <a href="adminpage.php#plantinder-management" class="btn btn-light mt-3">Back</a>
             </form>
         </div>
     </div>

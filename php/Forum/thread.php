@@ -17,7 +17,7 @@ if (isset($_GET['id'])) {
     $stmt->fetch();
     $stmt->close();
 
-    $reply_stmt = $conn->prepare("SELECT r.body, r.created_at, u.username FROM reply r JOIN Users u ON r.user_id = u.user_id WHERE r.question_id = ? ORDER BY r.created_at ASC");
+    $reply_stmt = $conn->prepare("SELECT r.reply_id, r.body, r.created_at, u.username FROM reply r JOIN Users u ON r.user_id = u.user_id WHERE r.question_id = ? ORDER BY r.created_at ASC");
     $reply_stmt->bind_param("i", $question_id);
     $reply_stmt->execute();
     $replies = $reply_stmt->get_result();
@@ -84,15 +84,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_SESSION['user_id'])) {
                 <h6>Replies</h6>
             </div>
             <ul class="list-group list-group-flush">
-                <?php while ($reply = $replies->fetch_assoc()): ?>
-                    <li class="list-group-item">
-                        <p><?= nl2br(htmlspecialchars($reply['body'])) ?></p>
-                        <small class="text-muted">Replied by <?= htmlspecialchars($reply['username']) ?> on <?= $reply['created_at'] ?></small>
-                    </li>
-                <?php endwhile; ?>
+            <?php while ($reply = $replies->fetch_assoc()): ?>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <div>
+                        <p><?= htmlspecialchars($reply['body']) ?></p>
+                        <small class="text-muted">Replied by <?= htmlspecialchars($reply['username']) ?> on <?= date('M d, Y', strtotime($reply['created_at'])) ?></small>
+                    </div>
+                    <?php if ($_SESSION['role'] === 'agriculturist'): ?>
+                        <a href="delete.php?type=reply&id=<?= $reply['reply_id'] ?>" 
+                        class="btn btn-danger btn-sm"
+                        onclick="return confirm('Are you sure you want to delete this reply?');">
+                            Delete
+                        </a>
+                    <?php endif; ?>
+                </li>
+            <?php endwhile; ?>
             </ul>
         </div>
-
         <?php if (isset($_SESSION['user_id'])): ?>
             <div class="card">
                 <div class="card-header bg-success text-white">

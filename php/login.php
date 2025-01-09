@@ -27,7 +27,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             if ($role == 'admin') {
                 header("Location: Admin/adminpage.php");
                 exit();
-            } else {
+            } elseif ($role == 'agriculturist') {
+                header("Location: Admin/agriculturistpage.php");
+                exit();
+            }else {
                 header("Location: userpage.php");
                 exit();
             }

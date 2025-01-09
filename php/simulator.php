@@ -30,7 +30,7 @@
         <section class="container-fluid hero-page ">
         <nav class="navbar navbar-expand-lg fixed-top nav-bg">
           <div class="container-fluid">
-            <a class="navbar-brand mx-5" href="../index.html">
+            <a class="navbar-brand mx-5" href="../index.php">
               <strong class="fs-5 ms-3">TEEN-ANIM</strong>
             </a>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -53,7 +53,7 @@
         <p class="lead">Scan the QR code below to access our AR feature and explore interactive farming experiences. 
         This feature brings farming knowledge to life and provides a hands-on way to learn about sustainable agriculture.</p>
         <div class="card mx-auto mt-4 p-3" style="width: 24em;">
-            <img src="../images/qr.png" class="card-img-top" alt="QR Code for AR">
+            <img src="../images/qr2.png" class="card-img-top" alt="QR Code for AR">
             <div class="card-body">
                 <p class="card-text">Point your smartphone camera at this QR code or use a QR code scanner app to access the AR experience.</p>
             </div>

@@ -40,7 +40,15 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-success">
     <div class="container-fluid">
       <a class="navbar-brand ms-5" href="#">Farming Community Forum</a>
-      <a class="navbar-brand me-5" href="../userpage.php">Profile</a>
+      <?php
+        if ($_SESSION['role'] == 'student') {
+            echo '<a class="navbar-brand me-5" href="../userpage.php">Profile</a>';
+        } elseif ($_SESSION['role'] == 'agriculturist') {
+            echo '<a class="navbar-brand me-5" href="../Admin/agriculturistpage.php">Profile</a>';
+        } else {
+            echo '<a class="navbar-brand me-5" href="../adminpage.php">Profile</a>';
+        }
+      ?>
     </div>
   </nav>
 
@@ -71,15 +79,24 @@
       <ul class="list-group list-group-flush">
           <?php if ($result->num_rows > 0): ?>
               <?php while ($row = $result->fetch_assoc()): ?>
-                  <li class="list-group-item">
-                      <h6 class="mb-1">
-                      <a href="thread.php?id=<?= $row['question_id'] ?>" class="text-decoration-none">
-                          <?= htmlspecialchars($row['title']) ?>
-                      </a>
-                      </h6>
-                      <small class="text-muted">
-                          Posted by <?= htmlspecialchars($row['username']) ?> on <?= date('M d, Y', strtotime($row['created_at'])) ?>
-                      </small>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                      <div>
+                          <h6 class="mb-1">
+                              <a href="thread.php?id=<?= $row['question_id'] ?>" class="text-decoration-none">
+                                  <?= htmlspecialchars($row['title']) ?>
+                              </a>
+                          </h6>
+                          <small class="text-muted">
+                              Posted by <?= htmlspecialchars($row['username']) ?> on <?= date('M d, Y', strtotime($row['created_at'])) ?>
+                          </small>
+                      </div>
+                      <?php if ($_SESSION['role'] === 'agriculturist'): ?>
+                          <a href="delete.php?type=question&id=<?= $row['question_id'] ?>" 
+                            class="btn btn-danger btn-sm"
+                            onclick="return confirm('Are you sure you want to delete this question?');">
+                              Delete
+                          </a>
+                      <?php endif; ?>
                   </li>
               <?php endwhile; ?>
           <?php else: ?>
@@ -89,9 +106,7 @@
           <?php endif; ?>
       </ul>
   </div>
-
   </main>
-
   <footer class="bg-success text-center text-white py-3 mt-auto">
     <p class="mb-0">&copy; 2024 Farming Community. All rights reserved.</p>
   </footer>
