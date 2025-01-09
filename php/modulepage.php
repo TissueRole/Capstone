@@ -69,6 +69,7 @@
     <nav class="navbar navbar-expand-lg sticky-top px-5 bg-success text-white">
         <div class="container-fluid">
             <a class="navbar-brand mx-5 text-white" href="../index.php">
+                <img src="../images/clearteenalogo.png" class="teenanimlogo" alt="home logo" style="width: 50px; height: 50px;">
                 <strong class="fs-5 ms-3">TEEN-ANIM</strong>
             </a>
             <div class="collapse navbar-collapse" id="navbarNav">
