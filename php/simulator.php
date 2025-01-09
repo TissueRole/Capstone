@@ -51,18 +51,24 @@
         <h1 class="mb-3">Experience Augmented Reality in Farming</h1>
         <p class="lead">Scan the QR code below to access our AR feature and explore interactive farming experiences. 
         This feature brings farming knowledge to life and provides a hands-on way to learn about sustainable agriculture.</p>
-        <div class="card mx-auto mt-4 p-3" style="width: 24em;">
-            <img src="../images/qr2.png" class="card-img-top" alt="QR Code for AR">
-            <div class="card-body">
-                <p class="card-text">Point your smartphone camera at this QR code or use a QR code scanner app to access the AR experience.</p>
+        <div class="row gap-3 p-5">
+            <div class="card mx-auto p-3 col" style="width: 19em;">
+                <img src="../images/qr2.png" class="card-img-top" alt="QR Code for AR">
+                <div class="card-body">
+                    <p class="card-text">Point your smartphone camera at this QR code or use a QR code scanner app to access the AR experience.</p>
+                </div>
+            </div>
+            <div class="card mx-auto p-3 col" style="width: 19em;">
+                <img src="../images/clearteenalogo.png" class="card-img-top" alt="Image for for AR">
+                <div class="card-body">
+                    <p class="card-text">After Dowloading the App. Point your camera here.</p>
+                </div>
             </div>
         </div>
     </main>
-
     <footer class=" text-white text-center py-3">
         &copy; 2024 Farming AR. All rights reserved.
     </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
