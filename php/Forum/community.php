@@ -46,7 +46,7 @@
         } elseif ($_SESSION['role'] == 'agriculturist') {
             echo '<a class="navbar-brand me-5" href="../Admin/agriculturistpage.php">Profile</a>';
         } else {
-            echo '<a class="navbar-brand me-5" href="../adminpage.php">Profile</a>';
+            echo '<a class="navbar-brand me-5" href="../login.php">Profile</a>';
         }
       ?>
     </div>
