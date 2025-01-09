@@ -23,6 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_SESSION['user_id'] = $user_id;
             $_SESSION['username'] = $username;
             $_SESSION['role'] = $role;
+            $_SESSION['logged_in'] = true;
 
             if ($role == 'admin') {
                 header("Location: Admin/adminpage.php");
@@ -31,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 header("Location: Admin/agriculturistpage.php");
                 exit();
             }else {
-                header("Location: Forum/community.php");
+                header("Location: ../index.php");
                 exit();
             }
         } else {
@@ -46,7 +47,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 ?>
 
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

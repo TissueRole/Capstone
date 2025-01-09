@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,27 +14,31 @@
 </head>
 <body>
     <section class="container-fluid hero-page "> 
-      <nav class="navbar navbar-expand-lg sticky-top nav-bg mb-5"> 
-        <div class="container-fluid"> 
-          <a class="navbar-brand mx-5" href="index.php"> 
-            <img src="images/clearteenalogo.png" class="teenanimlogo" alt="home logo" class="d-inline-block align-text-top "> 
-            <strong class="fs-5 ms-3">TEEN-ANIM</strong> 
-          </a> 
-          <div class="collapse navbar-collapse" id="navbarNav"> 
-            <ul class="navbar-nav ms-auto me-5"> 
-              <li class="nav-item mx-3"> 
-                <a class="nav-link fw-bold fs-5" href="php/modulepage.php">Modules</a> 
-              </li> 
-              <li class="nav-item mx-3"> 
-                <a class="nav-link fw-bold fs-5" href="php/Forum/community.php">Community</a> 
-              </li> 
-              <li class="nav-item mx-3"> 
-                <a href="php/login.php" class="btn btn-success" >Sign In</a> 
-              </li> 
-            </ul> 
-          </div> 
-        </div> 
-      </nav> 
+      <nav class="navbar navbar-expand-lg sticky-top nav-bg mb-5">
+        <div class="container-fluid">
+          <a class="navbar-brand mx-5" href="index.php">
+            <img src="images/clearteenalogo.png" class="teenanimlogo" alt="home logo" class="d-inline-block align-text-top">
+            <strong class="fs-5 ms-3">TEEN-ANIM</strong>
+          </a>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto me-5">
+              <li class="nav-item mx-3">
+                <a class="nav-link fw-bold fs-5" href="php/modulepage.php">Modules</a>
+              </li>
+              <li class="nav-item mx-3">
+                <a class="nav-link fw-bold fs-5" href="php/Forum/community.php">Community</a>
+              </li>
+              <li class="nav-item mx-3">
+                <?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true): ?>
+                  <a href="php/userpage.php" class="btn btn-success">Profile</a>
+                <?php else: ?>
+                  <a href="php/login.php" class="btn btn-success">Sign In</a>
+                <?php endif; ?>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
       <div class="hero-page-text text-center text-white d-flex flex-column justify-content-center align-items-center"> 
         <div>
           <h1 class="display-1 mt-5 mb-5">Welcome to Teen-Anim</h1> 
